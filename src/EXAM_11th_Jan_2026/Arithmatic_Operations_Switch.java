@@ -10,8 +10,8 @@ public class Arithmatic_Operations_Switch {
         System.out.println("Enter two numbers: ");
 
         if (sc.hasNextInt()) {
-            int a = sc.nextInt();
-            int b = sc.nextInt();
+            double a = sc.nextInt();
+            double b = sc.nextInt();
             switch (Operation) {
                 case "Add":
                     System.out.println("Addition is: " + (a+b));
@@ -23,6 +23,10 @@ public class Arithmatic_Operations_Switch {
                     System.out.println("Multiplication is: " + (a*b));
                     break;
                 case "Div":
+                    if (b==0) {
+                        System.out.println("Cannot divide by 0");
+                        break;
+                    }
                     System.out.println("Division is: " + (a/b));
                     break;
                 case "Rem":

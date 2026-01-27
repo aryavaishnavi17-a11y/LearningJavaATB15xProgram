@@ -30,6 +30,9 @@ public class Arithmatic_Operations {
     }
 
     public static int div(int a, int b) {
+            if (b == 0) {
+                throw new ArithmeticException("Cannot divided by 0");
+            }
         return a/b;
     }
 
